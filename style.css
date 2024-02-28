@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.head {
+  height: 40vh;
+  position: relative;
+  background: #f3f5f7;
+}
+
+.head .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+  /* background: red; */
+}
+.head .navbar .logo {
+  background: #eceef2;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #bdbec5;
+}
+.head .navbar .navbarRight {
+  /* background: yellow; */
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head .navbar .navbarRight .addBtn {
+  margin-right: 20px;
+  background: #232e4d;
+  height: calc(100% + 20px);
+  align-self: flex-end;
+  padding: 0 13px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 5px;
+  font-size: 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.head .navbar .navbarRight .profile {
+  display: flex;
+  align-items: center;
+  /* background: yellow; */
+  color: #fff;
+  height: 100%;
+}
+.head .navbar .navbarRight .profile .profileLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d1d3e2;
+  height: 100%;
+  padding: 0 15px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.head .navbar .navbarRight .profile .profileName {
+  color: #9c9da4;
+  margin-left: 15px;
+}
+
+.head .notFound {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  background: #fff;
+  border-radius: 50%;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.head .notFound img {
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+}
+.head .notFound h3 {
+  margin-bottom: 20px;
+  color: #232e4d;
+}
+.head .notFound p {
+  width: 70%;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 600px) {
+  .head .navbar .navbarRight .profile .profileName {
+    color: #9c9da4;
+  }
+  .head .notFound {
+    width: 100%;
+    justify-content: start;
+  }
+  .head .notFound p {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .head .navbar .navbarRight .profile .profileName {
+    display: none;
+  }
+}
